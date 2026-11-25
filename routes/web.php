@@ -183,7 +183,7 @@ Route::middleware('adminCheck')->group(
             ->middleware("permission:update $Name");
         Route::get("$Name/{invoice}/payment-history", [InvoiceController::class, 'showPaymentHistory'])
             ->name("$Name.payment-history.show")
-            ->middleware("permission:read $Name");
+            ->middleware("permission:read $Name") ;
 
 
         //expenseOffers
